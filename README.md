@@ -1,18 +1,19 @@
-Role Name
-=========
+emacs ansible role
+==================
 
-Role to Emacs on debian, ubuntu and mint.
+![CI](https://github.com/baztian/ansible-myrole/workflows/CI/badge.svg
+
+Role to install Emacs on debian, ubuntu and mint.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
+      become: yes
       roles:
          - role: baztian.emacs
 
 License
 -------
 
-GPLv3
+MIT

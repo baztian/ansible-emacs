@@ -1,7 +1,7 @@
 emacs ansible role
 ==================
 
-![CI](https://github.com/baztian/ansible-myrole/workflows/CI/badge.svg
+![CI](https://github.com/baztian/ansible-emacs/workflows/CI/badge.svg)
 
 Role to install Emacs on debian, ubuntu and mint.
 

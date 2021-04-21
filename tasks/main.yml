@@ -4,7 +4,7 @@
 - name: Determine whether Emacs 26 PPA required
   set_fact:
     ppa_required: "{{ ansible_distribution == 'Debian' and ansible_distribution_release == 'stretch'
-     or ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'xenial'
+     or ansible_distribution == 'Ubuntu' and ansible_distribution_release in ('xenial', 'bionic')
      or ansible_distribution == 'Linux Mint' and ansible_distribution_major_version == '18' }}"
 - name: Install dirmngr in order to be able to install the apt signing key
   apt:

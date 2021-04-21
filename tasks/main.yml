@@ -17,7 +17,7 @@
     keyserver: keyserver.ubuntu.com
   when: ppa_required
 - name: Extract distribution base name (works on linux mint as well)
-  command: grep -oP 'UBUNTU_CODENAME=\K.*' /etc/os-release
+  command: grep -oP '{{ "VERSION" if ansible_distribution == "Debian" else "UBUNTU" }}_CODENAME=\K.*' /etc/os-release
   register: distro
   changed_when: False
 - name: Add Kevin Kelley's Emacs PPA (deb)
